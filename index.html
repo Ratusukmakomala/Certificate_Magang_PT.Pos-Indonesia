@@ -3,10 +3,6 @@
 
 <head>
 
-  <!-- ================================
-       BASIC INFORMATION
-       ================================ -->
-
   <meta charset="utf-8">
 
   <meta
@@ -15,7 +11,7 @@
   >
 
   <title>
-    Verifikasi Sertifikat Magang - PT Pos Indonesia
+    Verifikasi Sertifikat Magang | PT Pos Indonesia
   </title>
 
   <meta
@@ -23,281 +19,628 @@
     content="Halaman verifikasi sertifikat Praktik Kerja Lapangan Ratu Sukmakomala di PT Pos Indonesia (Persero)."
   >
 
-  <meta
-    name="author"
-    content="Ratu Sukmakomala"
-  >
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
 
 
-  <!-- ================================
-       STYLESHEET
-       ================================ -->
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
 
-  <link
-    rel="stylesheet"
-    href="assets/style.css"
-  >
+      background:
+        linear-gradient(
+          135deg,
+          #061a3a,
+          #0a2f63,
+          #123f78
+        );
+
+      color: #172033;
+      min-height: 100vh;
+    }
+
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    .header {
+      text-align: center;
+      color: white;
+      margin-bottom: 28px;
+    }
+
+
+    .brand {
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+
+    .brand-orange {
+      color: #f58220;
+    }
+
+
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+
+    .header p {
+      margin-top: 10px;
+      opacity: 0.88;
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       MAIN CARD
+       ========================= */
+
+    .card {
+      background: white;
+      border-radius: 22px;
+      padding: 35px;
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,0.28);
+    }
+
+
+    /* =========================
+       VERIFIED
+       ========================= */
+
+    .verified {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+
+    .verified-icon {
+      width: 65px;
+      height: 65px;
+
+      background: #f58220;
+      color: white;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: auto;
+
+      font-size: 32px;
+      font-weight: bold;
+
+      box-shadow:
+        0 8px 20px rgba(245,130,32,0.30);
+    }
+
+
+    .verified h2 {
+      margin: 15px 0 5px;
+
+      color: #0a2f63;
+
+      font-size: 25px;
+    }
+
+
+    .verified p {
+      margin: 0;
+      color: #64748b;
+    }
+
+
+    /* =========================
+       DETAILS
+       ========================= */
+
+    .details {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 16px;
+
+      margin-top: 25px;
+    }
+
+
+    .item {
+      background: #f8fafc;
+
+      border: 1px solid #dbe3ef;
+
+      border-left:
+        4px solid #f58220;
+
+      border-radius: 12px;
+
+      padding: 16px;
+    }
+
+
+    .item .label {
+      font-size: 12px;
+
+      color: #64748b;
+
+      margin-bottom: 6px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.5px;
+    }
+
+
+    .item .value {
+      font-size: 16px;
+
+      font-weight: bold;
+
+      color: #172033;
+
+      line-height: 1.4;
+    }
+
+
+    /* =========================
+       SECTION
+       ========================= */
+
+    .section-title {
+      margin-top: 30px;
+      margin-bottom: 15px;
+
+      color: #0a2f63;
+
+      font-size: 20px;
+
+      border-bottom:
+        2px solid #f58220;
+
+      padding-bottom: 8px;
+    }
+
+
+    /* =========================
+       SIGNATORY
+       ========================= */
+
+    .signatory {
+      margin-top: 28px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f8fafc,
+          #eef3f9
+        );
+
+      border-radius: 14px;
+
+      padding: 20px;
+
+      border: 1px solid #dbe3ef;
+    }
+
+
+    .signatory h3 {
+      margin-top: 0;
+
+      color: #0a2f63;
+    }
+
+
+    .signatory p {
+      margin: 7px 0;
+
+      color: #475569;
+    }
+
+
+    .signatory strong {
+      color: #172033;
+    }
+
+
+    /* =========================
+       ACTION BUTTONS
+       ========================= */
+
+    .actions {
+      display: flex;
+
+      gap: 12px;
+
+      margin-top: 28px;
+    }
+
+
+    .button {
+      flex: 1;
+
+      text-align: center;
+
+      text-decoration: none;
+
+      border: none;
+
+      border-radius: 10px;
+
+      padding: 14px;
+
+      font-size: 15px;
+
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.2s,
+        opacity 0.2s;
+    }
+
+
+    .primary {
+      background: #0a2f63;
+
+      color: white;
+
+      box-shadow:
+        0 6px 15px rgba(10,47,99,0.20);
+    }
+
+
+    .secondary {
+      background: #f58220;
+
+      color: white;
+
+      box-shadow:
+        0 6px 15px rgba(245,130,32,0.20);
+    }
+
+
+    .button:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       COPIED MESSAGE
+       ========================= */
+
+    .copied {
+      text-align: center;
+
+      color: #15803d;
+
+      font-size: 14px;
+
+      margin-top: 12px;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    .footer {
+      text-align: center;
+
+      color:
+        rgba(255,255,255,0.78);
+
+      font-size: 13px;
+
+      margin-top: 25px;
+
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 650px) {
+
+      .container {
+        padding:
+          25px 14px;
+      }
+
+
+      .header h1 {
+        font-size: 28px;
+      }
+
+
+      .card {
+        padding: 22px;
+      }
+
+
+      .details {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .actions {
+        flex-direction:
+          column;
+      }
+
+    }
+
+  </style>
 
 </head>
 
 
 <body>
 
-  <!-- ================================
-       MAIN CONTAINER
-       ================================ -->
 
-  <main class="wrap">
+  <div class="container">
 
 
-    <!-- ================================
-         HERO / HEADER
-         ================================ -->
+    <!-- =========================
+         HEADER
+         ========================= -->
 
-    <section class="hero">
+    <div class="header">
 
       <div class="brand">
-        POS IND
+        PT POS INDONESIA
       </div>
 
-      <div class="brand">
+      <div
+        class="brand brand-orange"
+      >
         CERTIFICATE VERIFICATION
       </div>
-
 
       <h1>
         Sertifikat Terverifikasi
       </h1>
 
-
-      <p class="muted">
-        Gunakan informasi sertifikat berikut untuk
-        memeriksa keaslian dokumen Praktik Kerja
-        Lapangan yang diterbitkan oleh
-        PT Pos Indonesia (Persero).
+      <p>
+        Official online certificate verification
       </p>
 
-    </section>
+    </div>
 
 
 
-    <!-- ================================
-         CERTIFICATE CARD
-         ================================ -->
+    <!-- =========================
+         CARD
+         ========================= -->
 
-    <section class="card">
+    <div class="card">
 
 
-      <!-- STATUS -->
+      <!-- VERIFIED -->
 
-      <div class="status">
+      <div class="verified">
 
-        <span class="dot"></span>
+        <div class="verified-icon">
+          ✓
+        </div>
 
-        Certificate record found
+        <h2>
+          Certificate Verified
+        </h2>
+
+        <p>
+          Sertifikat Praktik Kerja Lapangan
+          berhasil diverifikasi.
+        </p>
 
       </div>
 
 
 
-      <!-- ================================
+      <!-- =========================
            CERTIFICATE DETAILS
-           ================================ -->
+           ========================= -->
 
-      <dl class="details">
+      <div class="details">
 
 
-        <!-- NAMA -->
+        <div class="item">
 
-        <div>
-
-          <dt>
+          <div class="label">
             Nama
-          </dt>
+          </div>
 
-          <dd>
+          <div class="value">
             Ratu Sukmakomala
-          </dd>
+          </div>
 
         </div>
 
 
 
-        <!-- INSTITUSI -->
+        <div class="item">
 
-        <div>
-
-          <dt>
-            Institusi
-          </dt>
-
-          <dd>
-            Universitas Logistik dan Bisnis Internasional
-          </dd>
-
-        </div>
-
-
-
-        <!-- JURUSAN -->
-
-        <div>
-
-          <dt>
-            Jurusan
-          </dt>
-
-          <dd>
-            Teknik Informatika
-          </dd>
-
-        </div>
-
-
-
-        <!-- NIM -->
-
-        <div>
-
-          <dt>
-            NIM
-          </dt>
-
-          <dd>
-            1214007
-          </dd>
-
-        </div>
-
-
-
-        <!-- PROGRAM -->
-
-        <div>
-
-          <dt>
-            Program / Kegiatan
-          </dt>
-
-          <dd>
-            Praktik Kerja Lapangan (PKL)
-          </dd>
-
-        </div>
-
-
-
-        <!-- NOMOR SERTIFIKAT -->
-
-        <div>
-
-          <dt>
+          <div class="label">
             Nomor Sertifikat
-          </dt>
+          </div>
 
-          <dd>
+          <div class="value">
             045/SEK-SRT/XII.2024
-          </dd>
+          </div>
 
         </div>
 
 
 
-        <!-- TEMPAT MAGANG -->
+        <div class="item">
 
-        <div>
+          <div class="label">
+            Institusi
+          </div>
 
-          <dt>
+          <div class="value">
+            Universitas Logistik dan
+            Bisnis Internasional
+          </div>
+
+        </div>
+
+
+
+        <div class="item">
+
+          <div class="label">
+            Jurusan
+          </div>
+
+          <div class="value">
+            Teknik Informatika
+          </div>
+
+        </div>
+
+
+
+        <div class="item">
+
+          <div class="label">
+            NIM
+          </div>
+
+          <div class="value">
+            1214007
+          </div>
+
+        </div>
+
+
+
+        <div class="item">
+
+          <div class="label">
+            Program / Kegiatan
+          </div>
+
+          <div class="value">
+            Praktik Kerja Lapangan (PKL)
+          </div>
+
+        </div>
+
+
+
+        <div class="item">
+
+          <div class="label">
             Tempat Magang
-          </dt>
+          </div>
 
-          <dd>
+          <div class="value">
             PT Pos Indonesia (Persero)
-          </dd>
+          </div>
 
         </div>
 
 
 
-        <!-- PERIODE -->
+        <div class="item">
 
-        <div>
-
-          <dt>
+          <div class="label">
             Periode Magang
-          </dt>
+          </div>
 
-          <dd>
+          <div class="value">
             04 Oktober – 10 Januari 2025
-          </dd>
+          </div>
 
         </div>
 
 
 
-        <!-- HASIL -->
+        <div class="item">
 
-        <div>
-
-          <dt>
+          <div class="label">
             Hasil
-          </dt>
+          </div>
 
-          <dd>
+          <div class="value">
             Baik
-          </dd>
+          </div>
 
         </div>
 
 
 
-        <!-- TANGGAL SERTIFIKAT -->
+        <div class="item">
 
-        <div>
-
-          <dt>
+          <div class="label">
             Tanggal Sertifikat
-          </dt>
+          </div>
 
-          <dd>
+          <div class="value">
             13 Januari 2025
-          </dd>
+          </div>
 
         </div>
 
 
 
-        <!-- PENERBIT -->
+        <div class="item">
 
-        <div>
-
-          <dt>
+          <div class="label">
             Penerbit
-          </dt>
+          </div>
 
-          <dd>
+          <div class="value">
             PT Pos Indonesia (Persero)
-          </dd>
+          </div>
 
         </div>
 
-
-      </dl>
-
+      </div>
 
 
-      <!-- ================================
-           SIGNATORY INFORMATION
-           ================================ -->
+
+      <!-- =========================
+           SIGNATORY
+           ========================= -->
+
+      <h3 class="section-title">
+        Informasi Penerbit
+      </h3>
+
 
       <div class="signatory">
 
-        <h3>
-          Informasi Penerbit
-        </h3>
-
         <p>
-          <strong>Agus Komarudin</strong>
+          <strong>
+            Agus Komarudin
+          </strong>
         </p>
 
         <p>
@@ -316,14 +659,12 @@
 
 
 
-      <!-- ================================
-           ACTION BUTTONS
-           ================================ -->
+      <!-- =========================
+           BUTTONS
+           ========================= -->
 
       <div class="actions">
 
-
-        <!-- LIHAT PDF -->
 
         <a
           class="button primary"
@@ -334,9 +675,6 @@
           Lihat Sertifikat PDF
         </a>
 
-
-
-        <!-- COPY LINK -->
 
         <button
           type="button"
@@ -350,9 +688,6 @@
       </div>
 
 
-
-      <!-- COPY MESSAGE -->
-
       <p
         id="copied"
         class="copied"
@@ -360,55 +695,40 @@
       ></p>
 
 
-    </section>
+    </div>
 
 
 
-    <!-- ================================
+    <!-- =========================
          FOOTER
-         ================================ -->
+         ========================= -->
 
-    <footer>
+    <div class="footer">
 
+      Nomor Sertifikat:
+      <strong>
+        045/SEK-SRT/XII.2024
+      </strong>
 
-      <p>
+      <br>
 
-        Nomor sertifikat:
+      Halaman verifikasi online
+      Sertifikat Praktik Kerja Lapangan
 
-        <strong>
-          045/SEK-SRT/XII.2024
-        </strong>
+      <br><br>
 
-      </p>
+      © 2025 Ratu Sukmakomala
 
-
-      <p class="muted">
-
-        Halaman ini merupakan halaman verifikasi
-        online untuk dokumen sertifikat Praktik
-        Kerja Lapangan yang diterbitkan oleh
-        PT Pos Indonesia (Persero).
-
-      </p>
+    </div>
 
 
-      <p class="muted">
-
-        © 2025 Ratu Sukmakomala
-
-      </p>
-
-
-    </footer>
-
-
-  </main>
+  </div>
 
 
 
-  <!-- ================================
+  <!-- =========================
        JAVASCRIPT
-       ================================ -->
+       ========================= -->
 
   <script>
 
@@ -431,6 +751,7 @@
         .catch(function () {
 
           copiedMessage.textContent =
+            "Link: " +
             window.location.href;
 
         });
