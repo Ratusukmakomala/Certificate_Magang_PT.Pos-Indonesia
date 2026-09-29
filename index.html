@@ -1,47 +1,28 @@
 <!doctype html>
 <html lang="id">
-
 <head>
-
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
-
-  <title>
-    Verifikasi Sertifikat Magang | PT Pos Indonesia
-  </title>
+  <title>Verifikasi Sertifikat Magang | PT Pos Indonesia</title>
 
   <meta
     name="description"
-    content="Halaman verifikasi sertifikat Praktik Kerja Lapangan Ratu Sukmakomala di PT Pos Indonesia (Persero)."
+    content="Verifikasi sertifikat Praktik Kerja Lapangan Ratu Sukmakomala di PT Pos Indonesia (Persero)."
   >
 
   <style>
-
     * {
       box-sizing: border-box;
     }
 
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-
-      background:
-        linear-gradient(
-          135deg,
-          #061a3a,
-          #0a2f63,
-          #123f78
-        );
-
+      background: linear-gradient(135deg, #061a3a, #0a2f63, #123f78);
       color: #172033;
       min-height: 100vh;
     }
-
 
     .container {
       max-width: 900px;
@@ -49,17 +30,12 @@
       padding: 40px 20px;
     }
 
-
-    /* =========================
-       HEADER
-       ========================= */
-
+    /* HEADER */
     .header {
       text-align: center;
       color: white;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
-
 
     .brand {
       font-size: 14px;
@@ -68,357 +44,207 @@
       margin-bottom: 10px;
     }
 
-
-    .brand-orange {
+    .orange {
       color: #f58220;
     }
 
-
     .header h1 {
-      margin: 0;
+      margin: 10px 0 8px;
       font-size: 36px;
     }
 
-
     .header p {
-      margin-top: 10px;
-      opacity: 0.88;
+      margin: 0;
       font-size: 15px;
+      opacity: 0.9;
     }
 
-
-    /* =========================
-       MAIN CARD
-       ========================= */
-
+    /* CARD */
     .card {
-      background: white;
+      background: #ffffff;
       border-radius: 22px;
       padding: 35px;
-
-      box-shadow:
-        0 20px 50px rgba(0,0,0,0.28);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.28);
     }
 
-
-    /* =========================
-       VERIFIED
-       ========================= */
-
+    /* VERIFIED */
     .verified {
       text-align: center;
       margin-bottom: 30px;
     }
 
-
     .verified-icon {
-      width: 65px;
-      height: 65px;
-
-      background: #f58220;
-      color: white;
-
-      border-radius: 50%;
-
+      width: 68px;
+      height: 68px;
+      margin: auto;
       display: flex;
       align-items: center;
       justify-content: center;
 
-      margin: auto;
+      border-radius: 50%;
+      background: #f58220;
+      color: white;
 
-      font-size: 32px;
+      font-size: 34px;
       font-weight: bold;
 
-      box-shadow:
-        0 8px 20px rgba(245,130,32,0.30);
+      box-shadow: 0 8px 20px rgba(245,130,32,0.3);
     }
-
 
     .verified h2 {
-      margin: 15px 0 5px;
-
+      margin: 15px 0 6px;
       color: #0a2f63;
-
       font-size: 25px;
     }
-
 
     .verified p {
       margin: 0;
       color: #64748b;
     }
 
-
-    /* =========================
-       DETAILS
-       ========================= */
-
+    /* DETAILS */
     .details {
       display: grid;
-
-      grid-template-columns:
-        1fr 1fr;
-
-      gap: 16px;
-
-      margin-top: 25px;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
     }
-
 
     .item {
       background: #f8fafc;
-
       border: 1px solid #dbe3ef;
-
-      border-left:
-        4px solid #f58220;
-
+      border-left: 4px solid #f58220;
       border-radius: 12px;
-
       padding: 16px;
     }
 
-
-    .item .label {
-      font-size: 12px;
-
-      color: #64748b;
-
+    .label {
       margin-bottom: 6px;
-
+      color: #64748b;
+      font-size: 12px;
+      font-weight: bold;
       text-transform: uppercase;
-
       letter-spacing: 0.5px;
     }
 
-
-    .item .value {
-      font-size: 16px;
-
-      font-weight: bold;
-
+    .value {
       color: #172033;
-
-      line-height: 1.4;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.45;
     }
 
-
-    /* =========================
-       SECTION
-       ========================= */
-
+    /* PUBLISHER */
     .section-title {
-      margin-top: 30px;
-      margin-bottom: 15px;
-
-      color: #0a2f63;
-
-      font-size: 20px;
-
-      border-bottom:
-        2px solid #f58220;
-
+      margin: 30px 0 15px;
       padding-bottom: 8px;
+      border-bottom: 2px solid #f58220;
+      color: #0a2f63;
+      font-size: 20px;
     }
-
-
-    /* =========================
-       SIGNATORY
-       ========================= */
 
     .signatory {
-      margin-top: 28px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #f8fafc,
-          #eef3f9
-        );
-
-      border-radius: 14px;
-
-      padding: 20px;
-
+      background: #f8fafc;
       border: 1px solid #dbe3ef;
+      border-radius: 14px;
+      padding: 20px;
     }
-
-
-    .signatory h3 {
-      margin-top: 0;
-
-      color: #0a2f63;
-    }
-
 
     .signatory p {
       margin: 7px 0;
-
       color: #475569;
     }
 
-
     .signatory strong {
       color: #172033;
+      font-size: 17px;
     }
 
-
-    /* =========================
-       ACTION BUTTONS
-       ========================= */
-
+    /* BUTTONS */
     .actions {
       display: flex;
-
       gap: 12px;
-
       margin-top: 28px;
     }
 
-
     .button {
       flex: 1;
-
-      text-align: center;
-
-      text-decoration: none;
-
-      border: none;
-
+      border: 0;
       border-radius: 10px;
-
       padding: 14px;
-
+      text-align: center;
+      text-decoration: none;
       font-size: 15px;
-
       font-weight: bold;
-
       cursor: pointer;
-
-      transition:
-        transform 0.2s,
-        opacity 0.2s;
     }
-
 
     .primary {
       background: #0a2f63;
-
       color: white;
-
-      box-shadow:
-        0 6px 15px rgba(10,47,99,0.20);
     }
-
 
     .secondary {
       background: #f58220;
-
       color: white;
-
-      box-shadow:
-        0 6px 15px rgba(245,130,32,0.20);
     }
-
 
     .button:hover {
-      opacity: 0.92;
-      transform: translateY(-1px);
+      opacity: 0.9;
     }
-
-
-    /* =========================
-       COPIED MESSAGE
-       ========================= */
 
     .copied {
+      margin: 12px 0 0;
       text-align: center;
-
       color: #15803d;
-
       font-size: 14px;
-
-      margin-top: 12px;
     }
 
-
-    /* =========================
-       FOOTER
-       ========================= */
-
+    /* FOOTER */
     .footer {
-      text-align: center;
-
-      color:
-        rgba(255,255,255,0.78);
-
-      font-size: 13px;
-
       margin-top: 25px;
-
-      line-height: 1.6;
+      text-align: center;
+      color: rgba(255,255,255,0.8);
+      font-size: 13px;
+      line-height: 1.7;
     }
 
-
-    /* =========================
-       MOBILE
-       ========================= */
-
+    /* MOBILE */
     @media (max-width: 650px) {
-
       .container {
-        padding:
-          25px 14px;
+        padding: 25px 14px;
       }
-
 
       .header h1 {
         font-size: 28px;
       }
 
-
       .card {
         padding: 22px;
       }
 
-
       .details {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
-
 
       .actions {
-        flex-direction:
-          column;
+        flex-direction: column;
       }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
   <div class="container">
 
-
-    <!-- =========================
-         HEADER
-         ========================= -->
-
-    <div class="header">
+    <!-- HEADER -->
+    <header class="header">
 
       <div class="brand">
         PT POS INDONESIA
       </div>
 
-      <div
-        class="brand brand-orange"
-      >
+      <div class="brand orange">
         CERTIFICATE VERIFICATION
       </div>
 
@@ -430,19 +256,13 @@
         Official online certificate verification
       </p>
 
-    </div>
+    </header>
 
 
-
-    <!-- =========================
-         CARD
-         ========================= -->
-
-    <div class="card">
-
+    <!-- MAIN CARD -->
+    <main class="card">
 
       <!-- VERIFIED -->
-
       <div class="verified">
 
         <div class="verified-icon">
@@ -454,193 +274,92 @@
         </h2>
 
         <p>
-          Sertifikat Praktik Kerja Lapangan
-          berhasil diverifikasi.
+          Sertifikat Praktik Kerja Lapangan berhasil diverifikasi.
         </p>
 
       </div>
 
 
-
-      <!-- =========================
-           CERTIFICATE DETAILS
-           ========================= -->
-
+      <!-- CERTIFICATE DETAILS -->
       <div class="details">
 
-
         <div class="item">
-
-          <div class="label">
-            Nama
-          </div>
-
-          <div class="value">
-            Ratu Sukmakomala
-          </div>
-
+          <div class="label">Nama</div>
+          <div class="value">Ratu Sukmakomala</div>
         </div>
 
-
-
         <div class="item">
-
-          <div class="label">
-            Nomor Sertifikat
-          </div>
-
-          <div class="value">
-            045/SEK-SRT/XII.2024
-          </div>
-
+          <div class="label">Nomor Sertifikat</div>
+          <div class="value">045/SEK-SRT/XII.2024</div>
         </div>
 
-
-
         <div class="item">
-
-          <div class="label">
-            Institusi
-          </div>
-
+          <div class="label">Institusi</div>
           <div class="value">
-            Universitas Logistik dan
-            Bisnis Internasional
+            Universitas Logistik dan Bisnis Internasional
           </div>
-
         </div>
 
-
-
         <div class="item">
-
-          <div class="label">
-            Jurusan
-          </div>
-
-          <div class="value">
-            Teknik Informatika
-          </div>
-
+          <div class="label">Jurusan</div>
+          <div class="value">Teknik Informatika</div>
         </div>
 
-
-
         <div class="item">
-
-          <div class="label">
-            NIM
-          </div>
-
-          <div class="value">
-            1214007
-          </div>
-
+          <div class="label">NIM</div>
+          <div class="value">1214007</div>
         </div>
 
-
-
         <div class="item">
-
-          <div class="label">
-            Program / Kegiatan
-          </div>
-
+          <div class="label">Program / Kegiatan</div>
           <div class="value">
             Praktik Kerja Lapangan (PKL)
           </div>
-
         </div>
 
-
-
         <div class="item">
-
-          <div class="label">
-            Tempat Magang
-          </div>
-
+          <div class="label">Tempat Magang</div>
           <div class="value">
             PT Pos Indonesia (Persero)
           </div>
-
         </div>
 
-
-
         <div class="item">
-
-          <div class="label">
-            Periode Magang
-          </div>
-
+          <div class="label">Periode Magang</div>
           <div class="value">
             04 Oktober – 10 Januari 2025
           </div>
-
         </div>
 
-
-
         <div class="item">
-
-          <div class="label">
-            Hasil
-          </div>
-
-          <div class="value">
-            Baik
-          </div>
-
+          <div class="label">Hasil</div>
+          <div class="value">Baik</div>
         </div>
 
-
-
         <div class="item">
-
-          <div class="label">
-            Tanggal Sertifikat
-          </div>
-
-          <div class="value">
-            13 Januari 2025
-          </div>
-
+          <div class="label">Tanggal Sertifikat</div>
+          <div class="value">13 Januari 2025</div>
         </div>
 
-
-
         <div class="item">
-
-          <div class="label">
-            Penerbit
-          </div>
-
+          <div class="label">Penerbit</div>
           <div class="value">
             PT Pos Indonesia (Persero)
           </div>
-
         </div>
 
       </div>
 
 
-
-      <!-- =========================
-           SIGNATORY
-           ========================= -->
-
+      <!-- PUBLISHER -->
       <h3 class="section-title">
         Informasi Penerbit
       </h3>
 
-
       <div class="signatory">
 
         <p>
-          <strong>
-            Agus Komarudin
-          </strong>
+          <strong>Agus Komarudin</strong>
         </p>
 
         <p>
@@ -658,13 +377,8 @@
       </div>
 
 
-
-      <!-- =========================
-           BUTTONS
-           ========================= -->
-
+      <!-- BUTTONS -->
       <div class="actions">
-
 
         <a
           class="button primary"
@@ -675,18 +389,15 @@
           Lihat Sertifikat PDF
         </a>
 
-
         <button
-          type="button"
           class="button secondary"
+          type="button"
           onclick="copyLink()"
         >
           Salin Link Verifikasi
         </button>
 
-
       </div>
-
 
       <p
         id="copied"
@@ -694,73 +405,41 @@
         aria-live="polite"
       ></p>
 
-
-    </div>
-
+    </main>
 
 
-    <!-- =========================
-         FOOTER
-         ========================= -->
-
-    <div class="footer">
+    <!-- FOOTER -->
+    <footer class="footer">
 
       Nomor Sertifikat:
-      <strong>
-        045/SEK-SRT/XII.2024
-      </strong>
+      <strong>045/SEK-SRT/XII.2024</strong>
 
       <br>
 
-      Halaman verifikasi online
-      Sertifikat Praktik Kerja Lapangan
+      Halaman verifikasi online Sertifikat Praktik Kerja Lapangan
 
-      <br><br>
+      <br>
 
       © 2025 Ratu Sukmakomala
 
-    </div>
-
+    </footer>
 
   </div>
 
 
-
-  <!-- =========================
-       JAVASCRIPT
-       ========================= -->
-
   <script>
-
     function copyLink() {
+      const message = document.getElementById("copied");
 
-      const copiedMessage =
-        document.getElementById("copied");
-
-
-      navigator.clipboard
-        .writeText(window.location.href)
-
+      navigator.clipboard.writeText(window.location.href)
         .then(function () {
-
-          copiedMessage.textContent =
-            "Link berhasil disalin.";
-
+          message.textContent = "Link berhasil disalin.";
         })
-
         .catch(function () {
-
-          copiedMessage.textContent =
-            "Link: " +
-            window.location.href;
-
+          message.textContent = window.location.href;
         });
-
     }
-
   </script>
 
-
 </body>
-
 </html>
